@@ -1,1 +1,35 @@
 nvim/
+
+# Archivos temporales del sistema
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Archivos de aplicaciones específicas
+.config/BraveSoftware/
+.config/Code - OSS/
+.config/chromium/
+.config/dconf/
+.config/evolution/
+.config/cava/
+.config/pulse/
+.config/gtk-3.0/
+.config/ibus/
+
+# Archivos de usuario y sistema
+.config/mimeapps.list
+.config/user-dirs.dirs
+.config/user-dirs.locale
+.config/.gsd-keyboard.settings-ported
+
+# Cache y archivos temporales
+.cache/
+.local/share/
+
+# Logs
+*.log
+
+# Directorios de desarrollo
+.config/go/
