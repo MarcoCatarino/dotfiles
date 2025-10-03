@@ -1,0 +1,34 @@
+{
+  "layer": "top", 
+  "position": "top",
+  "output": "HDMI-A-1",
+  "height": 50,
+  "margin": "0 0 0 0",
+  
+  "modules-left": [
+    "custom/develop",
+    "custom/git",
+    "custom/shell",
+    "custom/database",
+    "custom/browser",
+    "custom/music",
+    "hyprland/workspaces",
+    "custom/swap"
+  ],
+
+  "modules-center": [
+    "hyprland/window"
+  ],
+  
+  "modules-right": [
+    "custom/cava",
+    "backlight",
+    "pulseaudio",
+    "group/hardware-drawer",
+    "network",
+    "clock",
+    "custom/power"
+  ],
+  
+  "include": ["~/.config/waybar/modules-external.json"]
+}

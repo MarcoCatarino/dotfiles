@@ -1,0 +1,243 @@
+{
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "persistent-workspaces": {
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4
+    },
+    "format-icons": {
+      "1": "1",
+      "2": "2", 
+      "3": "3",
+      "4": "4"
+    }
+  },
+
+  "custom/monitors": {
+    "format": " {}",
+    "interval": 5,
+    "tooltip": false
+  },
+
+  "hyprland/window": {
+    "rewrite": {
+      "(.*) - Brave": "$1",
+      "(.*) - Chromium": "$1",
+      "(.*) - Brave Search": "$1",
+      "(.*) - Outlook": "$1",
+      "(.*) - Visual Studio Code": "VSCode: $1",
+      "(.*) - Ghostty": "Terminal: $1",
+      "(.*) - Kitty": "Terminal: $1",
+      "(.*) - Spotify": "Spotify: $1",
+      "(.*) - Nautilus": "Files: $1",
+      "(.*) - Desktop": "Desktop"
+    },
+    "separate-outputs": true,
+    "format": "{}",
+    "max-length": 50,
+    "empty": "Desktop"
+  },
+
+  "custom/swap": {
+    "on-click": "~/.config/waybar/scripts/swap.sh",
+    "format": "Bg 󰔂 ",
+    "tooltip": true,
+    "tooltip-format": "Cambiar tema"
+  },
+
+  "group/hardware": {
+    "orientation": "horizontal",
+    "modules": [
+      "backlight",
+      "pulseaudio",
+      "network"
+    ]
+  },
+
+  "group/hardware-drawer": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 300,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "battery",
+      "cpu",
+      "disk", 
+      "temperature"
+    ]
+  },
+  
+  "clock": {
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#bb9af7'><b>{}</b></span>",
+        "days": "<span color='#7aa2f7'><b>{}</b></span>",
+        "weeks": "<span color='#9ece6a'><b>W{}</b></span>",
+        "weekdays": "<span color='#e0af68'><b>{}</b></span>",
+        "today": "<span background='#2ac3de' color='#1a1b26'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    },
+    "format": "{:%a %d %b | %I:%M %p}",
+    "format-alt": "󱑆  {:%Y-%m-%d 󰀠 %H:%M:%S}",
+    "interval": 1,
+    "on-click": "gnome-calendar"
+  },
+
+  "backlight": {
+    "format": "{icon}  {percent: >2}%",
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "on-scroll-down": "brightnessctl -c backlight set 5%-",
+    "on-scroll-up": "brightnessctl -c backlight set +5%",
+    "tooltip-format": "Brillo: {percent}%"
+  },
+
+  "battery": {
+  "states": {
+    "warning": 30,
+    "critical": 15
+  },
+    "format": "{icon}   {capacity: >2}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰚥 {capacity}%", 
+    "format-alt": "{icon} {time}",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip-format": "Batería: {capacity}% | {time}"
+  },
+ 
+  "network": {
+    "format": "⚠  Deshabilitada",
+    "format-wifi": "󰖩   {essid}",
+    "format-ethernet": "󰈀  Cableado",
+    "format-disconnected": "⚠  Desconectada", 
+    "tooltip-format": "󰩟 {ifname} via {gwaddr}",
+    "tooltip-format-wifi": "󰖩  {essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "󰈀 {ifname} ({ipaddr}/{cidr})",
+    "tooltip-format-disconnected": "⚠  Desconectada",
+    "on-click": "nm-connection-editor"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}  {volume: >2}%",
+    "format-bluetooth": "{icon} {volume: >2}%",
+    "format-muted": "󰸈 silenciado",
+    "format-icons": {
+      "headphones": "󰋋",
+      "handsfree": "󰋋", 
+      "headset": "󰋋",
+      "phone": "󰄜",
+      "portable": "󰄜",
+      "car": "󰄋",
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "on-click": "pavucontrol",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+    "tooltip-format": "Volumen: {volume}%"
+  },
+
+  "temperature": {
+    "thermal-zone": 4,
+    "critical-threshold": 80,
+    "format": "󰔏 {temperatureC}°C",
+    "tooltip-format": "Temperatura: {temperatureC}°C"
+  },
+    
+  "cpu": {
+    "format": "  {usage: >2}%",
+    "on-click": "kitty -e htop",
+    "tooltip-format": "CPU: {usage}%"
+  },
+
+  "disk": {
+    "format": " {percentage_used}%",
+    "path": "/",
+    "tooltip-format": "Disco: {used}/{total} ({percentage_used}%)"
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "wlogout -p layer-shell",
+  "tooltip": "Menú de energía"
+  },
+
+  "custom/cava": {
+    "exec": "sh ~/.config/waybar/scripts/Cava.sh",
+    "format": "{}",
+    "tooltip": false,
+    "on-click": "hyprctl reload & pkill waybar & waybar",
+    "layer": "below",
+    "output": "all"
+  },
+
+  "custom/folder": {
+    "format": "",
+    "on-click":"nautilus",
+    "tooltip":"Abrir Archivos"
+  },
+
+  "custom/develop": {
+    "format": "",
+    "on-click": "code --new-window",
+    "tooltip": "Abrir VSCode"
+  },
+
+  "custom/git": {
+    "format": "",
+    "on-click": "$(brave https://github.com)",
+    "tooltip": "Abrir Github"
+  },
+
+  "custom/shell": {
+    "format": "",
+    "on-click": "ghostty",
+    "tooltip": "Abrir Terminal"
+  },
+
+  "custom/database": {
+    "format": "",
+    "on-click": "dbeaver",
+    "tooltip": "Abrir DBeaver"
+  },
+
+  "custom/browser": {
+    "format": "",
+    "on-click": "brave",
+    "tooltip": "Abrir Navegador"
+  },
+
+  "custom/music": {
+    "format": "",
+    "on-click": "spotify",
+    "tooltip":"Abrir Spotify"
+  },
+ 
+  "tray": {
+    "spacing": 5
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "󰒳",
+      "deactivated": "󰒲"
+    }
+  }
+}

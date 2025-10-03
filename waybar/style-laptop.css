@@ -1,0 +1,240 @@
+import "colors.css";
+
+* {
+  color: @lavender;
+  border: 0;
+  padding: 0;
+  font-family: "Fira Sans Semibold", "Font Awesome 6 Free", FontAwesome, Roboto,
+    Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+window#waybar {
+  border: 0px solid rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+} 
+
+/* ===== SECCIÓN IZQUIERDA ===== */
+#custom-folder,
+#custom-develop,
+#custom-git, 
+#custom-shell,
+#custom-database,
+#custom-browser,
+#custom-music {
+  background-color: @surface0;
+  border-radius: 10px;
+  padding: 2px 10px;
+  margin: 2px 2px;
+  font-size: 15px;
+  min-width: 20px;
+}
+
+#custom-folder { color: @sky; }
+
+#custom-develop { color: @text; font-size: 13px; }
+
+#custom-git { color: @peach; }
+
+#custom-shell { color: @subtext0; }
+
+#custom-database { color: @flamingo; }
+
+#custom-browser { color: @yellow; }
+
+#custom-music { color: @green; }
+
+/* ==== Workspaces ====*/
+#workspaces {
+  border-style: solid;
+  background-color: @base;
+  opacity: 1;
+  border-radius: 8px;
+  margin: 6px 3px;
+  padding: 0px 8px;
+}
+
+#workspaces button {
+  color: @text;
+  border-radius: 6px;
+  margin: 2px;
+  padding: 2px 6px;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+#workspaces button:hover {
+  color: @mauve;
+  background: @surface0;
+  box-shadow: none;
+  text-shadow: none;
+  border: 0px;
+}
+
+/* Workspace activo/focused - MUY DESTACADO */
+#workspaces button.focused,
+#workspaces button.active {
+  color: @base;
+  background-color: @surface1;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 0 4px @overlay2;
+}
+
+#custom-swap {
+  background-color: @yellow;
+  color: @base;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 8px 10px 8px 5px;
+  font-weight: bold;
+}
+
+/* ===== SECCIÓN CENTRO ===== */
+#window {
+  background-color: @surface0;
+  color: @text;
+  border-radius: 8px;
+  margin: 6px 10px;
+  padding: 4px 10px;
+  font-weight: 500;
+}
+
+window#waybar.empty #window {
+  background-color: @surface0;
+  color: @subtext0;
+}
+
+/* ===== SECCIÓN DERECHA ===== */
+#clock {
+  background-color: @surface0;
+  color: @sky;
+  border-radius: 8px;
+  margin: 6px 3px;
+  padding: 4px 8px;
+  font-weight: bold;
+}
+
+#custom-cava {
+  background-color: shade(@base, 1.1);
+  color: @mauve;
+  border-radius: 10px;
+  margin: 8px 10px;
+  padding: 8px 12px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+}
+
+#custom-power {
+  background-color: @red;
+  color: @base;
+  border-radius: 8px;
+  margin: 6px 10px 6px 3px;
+  padding: 4px 12px;
+  font-size: 22px;
+}
+
+/* ===== HARDWARE INDIVIDUAL - PRE: Light|Volume|Battery|Wifi ===== */
+#backlight,
+#pulseaudio,
+#battery,
+#cpu,
+#disk,
+#temperature,
+#network {
+  background-color: @base;
+  border-radius: 8px;
+  padding: 4px 10px;
+  margin: 8px 2px;
+  font-size: 12px;
+}
+
+/* ===== GRUPO DRAWER - HOVER: CPU|Store|Temperature ===== */
+group#hardware-drawer {
+  background-color: @surface0;
+  border-radius: 8px;
+  margin: 8px 2px;
+  padding: 4px 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Mostrar drawer al hacer hover sobre battery */
+#battery:hover + group#hardware-drawer,
+group#hardware-drawer:hover {
+  opacity: 1;
+}
+
+group#hardware-drawer #cpu,
+group#hardware-drawer #disk,
+group#hardware-drawer #temperature {
+  background-color: transparent;
+  padding: 6px 10px;
+  margin: 0px 6px 0px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+/* ===== COLORES ESPECÍFICOS ===== */
+#backlight { color: @yellow; }
+
+#pulseaudio { color: @flamingo; }
+
+#pulseaudio.muted { color: @overlay0; }
+
+#network { color: @subtext1; }
+
+#network.disconnected { color: @red; }
+
+#battery { color: @green; }
+
+#battery.charging { color: @blue; }
+
+#battery.warning:not(.charging) { color: @yellow; }
+
+#battery.critical:not(.charging) {
+  color: @red;
+  animation: blink 0.5s linear infinite alternate;
+}
+
+#temperature { color: @teal; }
+
+#temperature.critical { color: @red; }
+
+#cpu { color: @sky; }
+
+#disk { color: @lavender; }
+
+/* ===== ANIMACIONES ===== */
+@keyframes blink {
+  to {
+    color: @maroon;
+    background-color: @red;
+  }
+}
+
+/* Efectos hover */
+#custom-folder:hover,
+#custom-develop:hover,
+#custom-git:hover,
+#custom-shell:hover,
+#custom-database:hover,
+#custom-browser:hover,
+#custom-music:hover,
+#custom-power:hover {
+  opacity: 0.8;
+}
+
+#workspaces button:hover {
+  opacity: 0.9;
+}
+
+/* ===== TOOLTIP STYLING ===== */
+tooltip {
+  background-color: @base;
+  color: @text;
+  border: 1px solid @surface0;
+  border-radius: 8px;
+}
+

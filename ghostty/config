@@ -1,0 +1,5 @@
+theme = TokyoNight Moon
+cursor-opacity = 1
+background-opacity = 0.8
+window-padding-x = 2
+keybind = shift+enter=text:\n
