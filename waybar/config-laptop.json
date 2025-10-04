@@ -12,7 +12,7 @@
     "custom/database",
     "custom/browser",
     "custom/music",
-    "hyprland/workspaces"
+    "hyprland/workspaces"  
   ],
 
   "modules-center": [

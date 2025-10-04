@@ -44,7 +44,6 @@ window#waybar {
 
 #custom-music { color: @green; }
 
-/* ==== Workspaces ====*/
 #workspaces {
   border-style: solid;
   background-color: @base;

@@ -4,10 +4,7 @@
     "all-outputs": true,
     "format": "{icon}",
     "persistent-workspaces": {
-      "1": 1,
-      "2": 2,
-      "3": 3,
-      "4": 4
+      "*": 4
     },
     "format-icons": {
       "1": "1",
@@ -15,12 +12,6 @@
       "3": "3",
       "4": "4"
     }
-  },
-
-  "custom/monitors": {
-    "format": " {}",
-    "interval": 5,
-    "tooltip": false
   },
 
   "hyprland/window": {
@@ -241,3 +232,4 @@
     }
   }
 }
+
