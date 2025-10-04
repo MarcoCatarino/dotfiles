@@ -44,12 +44,22 @@ window#waybar {
 
 #custom-music { color: @green; }
 
+/* === MONITORS === */
+#custom-monitors {
+  background-color: @surface0;
+  border-radius: 10px;
+  padding: 4px 12px;
+  margin: 8px 8px 8px 15px;  /* Más margen izquierdo para separar */
+  font-size: 14px;
+}
+
+/* === WORKSPACES === */
 #workspaces {
   border-style: solid;
   background-color: @base;
   opacity: 1;
   border-radius: 10px;
-  margin: 8px 5px;
+  margin: 8px 8px 8px 8px;
   padding: 0px 10px;
 }
 

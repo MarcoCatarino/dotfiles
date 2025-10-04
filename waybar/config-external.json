@@ -12,6 +12,7 @@
     "custom/database",
     "custom/browser",
     "custom/music",
+    "custom/monitors",
     "hyprland/workspaces",
     "custom/swap"
   ],
