@@ -33,3 +33,19 @@ Thumbs.db
 
 # Directorios de desarrollo
 .config/go/
+
+# Archivo random?
+.gsd-keyboard.settings-ported
+BraveSoftware/
+Code - OSS/
+cava/
+chromium/
+dconf/                                      
+evolution/                                  
+go/
+gtk-3.0/
+ibus/
+mimeapps.list                                
+pulse/
+user-dirs.dirs                               
+user-dirs.locale
