@@ -46,12 +46,50 @@ window#waybar {
 #custom-music { color: @green; }
 
 /* === MONITORS === */
-#custom-monitors {
-  background-color: @surface0;
-  border-radius: 10px;
-  padding: 4px 12px;
-  margin: 8px 8px 8px 15px;  /* Más margen izquierdo para separar */
-  font-size: 14px;
+#custom-monitor-1,
+#custom-monitor-2 {
+  background-color: @base;
+  border-radius: 6px;
+  margin: 2px;
+  padding: 4px 8px 2px 8px;
+  transition: all 0.2s ease;
+  color: @text;
+  font-weight: normal;
+}
+
+/* Primer módulo sin margen izquierdo extra */
+#custom-monitor-1 {
+  margin-left: 15px;
+  border-radius: 10px 6px 6px 10px;
+}
+
+/* Último módulo con borde redondeado derecho */
+#custom-monitor-2 {
+  margin-right: 8px;
+  border-radius: 6px 10px 10px 6px;
+}
+
+/* Estado activo - resaltado como workspace */
+#custom-monitor-1.active,
+#custom-monitor-2.active {
+  color: @base;
+  background-color: @surface1;
+  font-weight: bold;
+  box-shadow: 0 0 4px @overlay2;
+}
+
+/* Estado inactivo - mismo fondo pero menos destacado */
+#custom-monitor-1.inactive,
+#custom-monitor-2.inactive {
+  background-color: @base;
+  color: @text;
+  opacity: 0.7;
+}
+
+#custom-monitor-1:hover,
+#custom-monitor-2:hover {
+  opacity: 0.9;
+  background: @surface0;
 }
 
 /* === WORKSPACES === */
@@ -60,7 +98,7 @@ window#waybar {
   background-color: @base;
   opacity: 1;
   border-radius: 8px;
-  margin: 8px 8px 8px 8px;
+  margin: 8px 5px 8px 5px;
   padding: 0px 8px;
 }
 
