@@ -122,23 +122,44 @@ group#monitors {
   border: 0px;
 }
 
-/* Workspace activo/focused - MUY DESTACADO */
-#workspaces button.focused,
+/* Workspaces del LAPTOP (1-4) - Color AZUL */
+#workspaces button#ws-button-1,
+#workspaces button#ws-button-2,
+#workspaces button#ws-button-3,
+#workspaces button#ws-button-4 {
+  color: @blue;
+}
+
+/* Workspaces del EXTERNO (5-8) - Color MORADO */
+#workspaces button#ws-button-5,
+#workspaces button#ws-button-6,
+#workspaces button#ws-button-7,
+#workspaces button#ws-button-8 {
+  color: @mauve;
+}
+
+/* Workspace activo */
 #workspaces button.active {
-  color: @base;
   background-color: @surface1;
   border-radius: 8px;
   font-weight: bold;
   box-shadow: 0 0 4px @overlay2;
 }
 
-#custom-swap {
-  background-color: @yellow;
-  color: @base;
-  border-radius: 10px;
-  padding: 5px 10px;
-  margin: 8px 10px 8px 5px;
-  font-weight: bold;
+/* Laptop activo - mantener color azul */
+#workspaces button.active#ws-button-1,
+#workspaces button.active#ws-button-2,
+#workspaces button.active#ws-button-3,
+#workspaces button.active#ws-button-4 {
+  color: @blue;
+}
+
+/* Externo activo - mantener color morado */
+#workspaces button.active#ws-button-5,
+#workspaces button.active#ws-button-6,
+#workspaces button.active#ws-button-7,
+#workspaces button.active#ws-button-8 {
+  color: @mauve;
 }
 
 /* ===== SECCIÓN CENTRO ===== */
