@@ -79,7 +79,7 @@ group#monitors {
   background-color: @surface1;
   font-weight: bold;
   box-shadow: 0 0 2px @overlay2;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 /* Estado inactivo */
