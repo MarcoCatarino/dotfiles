@@ -46,6 +46,14 @@
     "tooltip": false
   },
 
+  "group/monitors": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/monitor-1",
+      "custom/monitor-2"
+    ]
+  },
+
   "custom/swap": {
     "on-click": "~/.config/waybar/scripts/swap.sh",
     "format": "Bg 󰔂 ",

@@ -24,15 +24,15 @@ window#waybar {
 #custom-music {
   background-color: @surface0;
   border-radius: 10px;
-  padding: 5px 10px;
-  margin: 8px 5px;
-  font-size: 16px;
+  padding: 5px 8px;
+  margin: 8px 3px;
+  font-size: 18px;
   min-width: 24px;
 }
 
 #custom-folder { color: @sky; }
 
-#custom-develop { color: @text; }
+#custom-develop { color: @text; font-size: 13px; margin-left: 10px; }
 
 #custom-git { color: @peach; }
 
@@ -45,50 +45,54 @@ window#waybar {
 #custom-music { color: @green; }
 
 /* === MONITORS === */
+group#monitors {
+  background-color: @base;
+  border-style: solid;
+  opacity: 1;
+  border-radius: 10px;
+  margin: 0px 5px;
+  padding: 0px;
+}
+
 #custom-monitor-1,
 #custom-monitor-2 {
-  background-color: @base;
-  border-radius: 6px;
-  margin: 2px;
-  padding: 4px 8px 2px 8px;
-  transition: all 0.2s ease;
-  color: @text;
+  margin: 8px 0px;
+  padding: 0px 12px;
+  transition: all 0.1s ease;
+  color: @lavander;
   font-weight: normal;
+  background: @base;
 }
 
-/* Primer módulo sin margen izquierdo extra */
 #custom-monitor-1 {
-  margin-left: 15px;
-  border-radius: 10px 6px 6px 10px;
+  border-radius: 8px 0px 0px 8px;
 }
 
-/* Último módulo con borde redondeado derecho */
 #custom-monitor-2 {
-  margin-right: 8px;
-  border-radius: 6px 10px 10px 6px;
+  border-radius: 0px 8px 8px 0px;
 }
 
 /* Estado activo - resaltado como workspace */
 #custom-monitor-1.active,
 #custom-monitor-2.active {
-  color: @base;
   background-color: @surface1;
   font-weight: bold;
   box-shadow: 0 0 4px @overlay2;
+  border-radius: 8px;
 }
 
-/* Estado inactivo - mismo fondo pero menos destacado */
+/* Estado inactivo */
 #custom-monitor-1.inactive,
 #custom-monitor-2.inactive {
-  background-color: @base;
+  background: @base;
   color: @text;
-  opacity: 0.7;
 }
 
 #custom-monitor-1:hover,
 #custom-monitor-2:hover {
   opacity: 0.9;
   background: @surface0;
+  color: @mauve;
 }
 
 /* === WORKSPACES === */
@@ -176,7 +180,7 @@ window#waybar.empty #window {
   background-color: @red;
   color: @base;
   border-radius: 10px;
-  margin: 8px 15px 8px 5px;
+  margin: 6px 10px 6px 6px;
   padding: 5px 12px;
   font-size: 22px;
 }
