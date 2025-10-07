@@ -13,8 +13,7 @@
     "custom/browser",
     "custom/music",
     "group/monitors",
-    "hyprland/workspaces",
-    "custom/swap"
+    "hyprland/workspaces"
   ],
 
   "modules-center": [
