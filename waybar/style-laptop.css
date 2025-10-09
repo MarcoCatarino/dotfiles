@@ -124,19 +124,21 @@ group#monitors {
 }
 
 /* Workspaces del LAPTOP (1-4) - Color AZUL */
-#workspaces button#ws-button-1,
-#workspaces button#ws-button-2,
-#workspaces button#ws-button-3,
-#workspaces button#ws-button-4 {
-  color: @blue;
+#workspaces button:nth-child(1),
+#workspaces button:nth-child(2),
+#workspaces button:nth-child(3),
+#workspaces button:nth-child(4),
+#workspaces button:nth-child(5) {
+color: @blue;
 }
 
 /* Workspaces del EXTERNO (5-8) - Color MORADO */
-#workspaces button#ws-button-5,
-#workspaces button#ws-button-6,
-#workspaces button#ws-button-7,
-#workspaces button#ws-button-8 {
-  color: @mauve;
+#workspaces button:nth-child(6),
+#workspaces button:nth-child(7),
+#workspaces button:nth-child(8),
+#workspaces button:nth-child(9),
+#workspaces button:nth-child(10) {
+color: @mauve;
 }
 
 /* Workspace activo */
