@@ -47,7 +47,7 @@ window#waybar {
 
 /* === MONITORS === */
 group#monitors {
-  background-color: @base;
+  background-color: @darkViolet;
   border-style: solid;
   opacity: 1;
   border-radius: 10px;
@@ -62,7 +62,7 @@ group#monitors {
   transition: all 0.1s ease;
   color: @lavander;
   font-weight: normal;
-  background: @base;
+  background: @darkViolet;
 }
 
 #custom-monitor-1 {
@@ -76,7 +76,7 @@ group#monitors {
 /* Estado activo - resaltado como workspace */
 #custom-monitor-1.active,
 #custom-monitor-2.active {
-  background-color: @surface1;
+  background-color: @lavender;
   font-weight: bold;
   box-shadow: 0 0 2px @overlay2;
   border-radius: 4px;
@@ -85,7 +85,7 @@ group#monitors {
 /* Estado inactivo */
 #custom-monitor-1.inactive,
 #custom-monitor-2.inactive {
-  background: @base;
+  background: @darkViolet;
   color: @text;
 }
 
