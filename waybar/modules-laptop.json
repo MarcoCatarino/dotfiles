@@ -211,7 +211,7 @@
 
   "custom/git": {
     "format": "",
-    "on-click": "$(brave https://github.com)",
+    "on-click": "$(firefox https://github.com)",
     "tooltip": "Abrir Github"
   },
 
@@ -225,6 +225,12 @@
     "format": "",
     "on-click": "dbeaver",
     "tooltip": "Abrir DBeaver"
+  },
+
+    "custom/figma": {
+    "format": "",
+    "on-click": "$(firefox https://figma.com)",
+    "tooltip": "Abrir Figma"
   },
 
   "custom/browser": {

@@ -227,6 +227,12 @@
     "tooltip": "Abrir DBeaver"
   },
 
+    "custom/figma": {
+    "format": "",
+    "on-click": "$(firefox https://figma.com)",
+    "tooltip": "Abrir Figma"
+  },
+
   "custom/browser": {
     "format": "",
     "on-click": "brave",

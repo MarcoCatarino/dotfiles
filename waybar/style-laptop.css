@@ -21,6 +21,7 @@ window#waybar {
 #custom-git, 
 #custom-shell,
 #custom-database,
+#custom-figma,
 #custom-browser,
 #custom-music {
   background-color: @surface0;
@@ -39,7 +40,9 @@ window#waybar {
 
 #custom-shell { color: @subtext0; }
 
-#custom-database { color: @flamingo; }
+#custom-database { color: @sapphire; }
+
+#custom-figma { color: @flamingo; }
 
 #custom-browser { color: @yellow; }
 
@@ -294,6 +297,7 @@ group#hardware-drawer #temperature {
 #custom-git:hover,
 #custom-shell:hover,
 #custom-database:hover,
+#custom-figma:hover,
 #custom-browser:hover,
 #custom-music:hover,
 #custom-power:hover {
