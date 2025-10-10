@@ -26,19 +26,17 @@ window#waybar {
 #custom-music {
   background-color: @surface0;
   border-radius: 8px;
-  padding: 5px 10px;
-  margin: 8px 2px 8px;
-  font-size: 15px;
+  padding: 10px 14px;
+  margin: 8px 2px;
+  font-size: 20px;
   min-width: 20px;
 }
 
-#custom-folder { color: @sky; }
+#custom-shell { color: @subtext0; margin-left: 10px; }
 
-#custom-develop { color: @text; font-size: 12px; margin-left: 10px; }
+#custom-develop { color: @text; font-size: 14px; }
 
 #custom-git { color: @peach; }
-
-#custom-shell { color: @subtext0; }
 
 #custom-database { color: @sapphire; }
 
@@ -46,7 +44,7 @@ window#waybar {
 
 #custom-browser { color: @yellow; }
 
-#custom-music { color: @green; }
+#custom-music { color: @green; margin-right: 15px; }
 
 /* === MONITORS === */
 group#monitors {
@@ -64,6 +62,7 @@ group#monitors {
   padding: 0px 12px;
   transition: all 0.1s ease;
   color: @lavander;
+  font-size: 18px;
   font-weight: normal;
   background: @darkViolet;
 }
@@ -74,6 +73,7 @@ group#monitors {
 
 #custom-monitor-2 {
   border-radius: 0px 8px 8px 0px;
+  margin-right: 15px;
 }
 
 /* Estado activo - resaltado como workspace */
@@ -82,7 +82,7 @@ group#monitors {
   background-color: @lavender;
   font-weight: bold;
   box-shadow: 0 0 2px @overlay2;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 /* Estado inactivo */
@@ -104,19 +104,19 @@ group#monitors {
   border-style: solid;
   background-color: @base;
   opacity: 1;
-  border-radius: 10px;
-  margin: 8px 5px 8px 5px;
+  border-radius: 8px;
+  margin: 8px 0px;
   padding: 0px 10px;
 }
 
 #workspaces button {
   color: @text;
-  border-radius: 6px;
+  background: transparent;
+  border-radius: 8px;
   margin: 2px;
   padding: 4px 8px 2px 8px;
   transition: all 0.2s ease;
-  background: transparent;
-}
+  }
 
 #workspaces button:hover {
   color: @mauve;
@@ -126,16 +126,16 @@ group#monitors {
   border: 0px;
 }
 
-/* Workspaces del LAPTOP (1-4) - Color AZUL */
+/* Workspaces del LAPTOP (1-5) - Color AZUL */
 #workspaces button:nth-child(1),
 #workspaces button:nth-child(2),
 #workspaces button:nth-child(3),
 #workspaces button:nth-child(4),
 #workspaces button:nth-child(5) {
-color: @blue;
+color: @lavander;
 }
 
-/* Workspaces del EXTERNO (5-8) - Color MORADO */
+/* Workspaces del EXTERNO (6-10) - Color MORADO */
 #workspaces button:nth-child(6),
 #workspaces button:nth-child(7),
 #workspaces button:nth-child(8),
@@ -156,15 +156,17 @@ color: @mauve;
 #workspaces button.active#ws-button-1,
 #workspaces button.active#ws-button-2,
 #workspaces button.active#ws-button-3,
-#workspaces button.active#ws-button-4 {
+#workspaces button.active#ws-button-4,
+#workspaces button.active#ws-button-5 {
   color: @blue;
 }
 
 /* Externo activo - mantener color morado */
-#workspaces button.active#ws-button-5,
 #workspaces button.active#ws-button-6,
 #workspaces button.active#ws-button-7,
-#workspaces button.active#ws-button-8 {
+#workspaces button.active#ws-button-8,
+#workspaces button.active#ws-button-9,
+#workspaces button.active#ws-button-10 {
   color: @mauve;
 }
 
@@ -176,6 +178,7 @@ color: @mauve;
   margin: 6px 10px;
   padding: 4px 10px;
   font-weight: 500;
+  font-size: 16px;
 }
 
 window#waybar.empty #window {
@@ -189,25 +192,15 @@ window#waybar.empty #window {
   color: @sky;
   border-radius: 8px;
   margin: 6px 3px;
-  padding: 4px 8px;
+  padding: 5px 15px;
   font-weight: bold;
-}
-
-#custom-cava {
-  background-color: shade(@base, 1.1);
-  color: @mauve;
-  border-radius: 10px;
-  margin: 8px 10px;
-  padding: 8px 12px;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 11px;
 }
 
 #custom-power {
   background-color: @red;
   color: @base;
   border-radius: 8px;
-  margin: 8px 10px 8px 6px;
+  margin: 8px 10px;
   padding: 4px 12px;
   font-size: 22px;
 }
@@ -222,9 +215,9 @@ window#waybar.empty #window {
 #network {
   background-color: @base;
   border-radius: 8px;
-  padding: 4px 10px;
-  margin: 8px 2px;
-  font-size: 12px;
+  padding: 4px 12px;
+  margin: 8px 4px;
+  font-size: 14px;
 }
 
 /* ===== GRUPO DRAWER - HOVER: CPU|Store|Temperature ===== */
@@ -247,7 +240,7 @@ group#hardware-drawer #cpu,
 group#hardware-drawer #disk,
 group#hardware-drawer #temperature {
   background-color: transparent;
-  padding: 6px 10px;
+  padding: 5px 10px;
   margin: 0px 6px 0px 12px;
   border-radius: 6px;
   font-size: 12px;

@@ -204,7 +204,7 @@
   },
 
   "custom/develop": {
-    "format": "",
+    "format": "",
     "on-click": "code --new-window",
     "tooltip": "Abrir VSCode"
   },

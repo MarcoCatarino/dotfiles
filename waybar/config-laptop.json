@@ -2,13 +2,13 @@
   "layer": "top", 
   "position": "top",
   "output": "eDP-2",
-  "height": 36,
+  "height": 38,
   "margin": "0 0 0 0",
   
   "modules-left": [
+    "custom/shell",
     "custom/develop",
     "custom/git",
-    "custom/shell",
     "custom/database",
     "custom/figma",
     "custom/browser",

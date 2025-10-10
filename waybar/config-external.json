@@ -2,13 +2,13 @@
   "layer": "top", 
   "position": "top",
   "output": "HDMI-A-1",
-  "height": 50,
+  "height": 48,
   "margin": "0 0 0 0",
   
   "modules-left": [
+    "custom/shell",
     "custom/develop",
     "custom/git",
-    "custom/shell",
     "custom/database",
     "custom/figma",
     "custom/browser",
